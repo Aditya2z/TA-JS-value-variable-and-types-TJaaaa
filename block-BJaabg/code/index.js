@@ -15,4 +15,28 @@ var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
 
+let totalPrice = 0;
+let counter = 0;
+
+  for(bank_balance = 303.91; bank_balance > PHONE_PRICE; bank_balance -= PHONE_PRICE, counter++ ) {
+    if(SPENDING_THRESHOLD > totalPrice) { 
+    totalPrice += PHONE_PRICE + ACCESSORY_PRICE
+     } else {
+        totalPrice += PHONE_PRICE;
+     }
+  }
+let taxTotal = TAX_RATE * totalPrice;
+amount = totalPrice + taxTotal;
+
+alert(`Price of ${counter} phones and their accessories= $${totalPrice}
+Tax = $${taxTotal}
+Your total amount for purchase of ${counter} phones  $${amount}`);
+
+
+if(amount > 303.91 ) {
+    alert(`You cannot afford the purchase`);
+} else {
+    alert(`You can Afford the purchase`);
+}
+
 // ⛑ Answer of the above will `$334.76`.
