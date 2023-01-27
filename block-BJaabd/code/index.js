@@ -208,21 +208,42 @@ operation = prompt(`Enter "add" for Addition
 "div" for Division`);
 let result;
 
-  if (operation === "add") {
-    result = num1 + num2;
-  }
-  if ( (operation === "sub") && (num1 < num2) ) {
-    alert(`Second Number is Larger than First Number`);
-  } else if (operation === "sub") {
-    result = num1 - num2;
-  }
-  if (operation === "mul") {
-    result = num1 * num2;
-  }
-  if ( (operation === "div") && (num1 < num2) ) {
-    alert(`Second Number is Larger than First Number`);
-  } else if (operation === "div") {
-    result = num1 / num2;
+  // if (operation === "add") {
+  //   result = num1 + num2;
+  // }
+  // if ( (operation === "sub") && (num1 < num2) ) {
+  //   alert(`Second Number is Larger than First Number`);
+  // } else if (operation === "sub") {
+  //   result = num1 - num2;
+  // }
+  // if (operation === "mul") {
+  //   result = num1 * num2;
+  // }
+  // if ( (operation === "div") && (num1 < num2) ) {
+  //   alert(`Second Number is Larger than First Number`);
+  // } else if (operation === "div") {
+  //   result = num1 / num2;
+  // }
+
+  switch (operation) {
+    case "add":
+      result = num1 + num2;
+    case "sub":
+      if (num1 < num2) {
+        alert(`Second Number is Larger than First Number`);
+      } else {
+        result = num1 - num2;
+      }
+    case "mul":
+      result = num1 * num2;
+    case "div":
+      if (num1 < num2) {
+        alert(`Second Number is Larger than First Number`);
+      } else {
+        result = num1 / num2;
+      }
+    default:
+      alert(`Enter a valid input`);
   }
 
   alert(`${result}`);
