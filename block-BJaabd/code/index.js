@@ -228,22 +228,28 @@ let result;
   switch (operation) {
     case "add":
       result = num1 + num2;
+      alert(`${result}`);
+      break;
     case "sub":
       if (num1 < num2) {
         alert(`Second Number is Larger than First Number`);
       } else {
         result = num1 - num2;
+        alert(`${result}`);
       }
+      break;
     case "mul":
       result = num1 * num2;
+      alert(`${result}`);
+      break;
     case "div":
       if (num1 < num2) {
         alert(`Second Number is Larger than First Number`);
       } else {
         result = num1 / num2;
+        alert(`${result}`);
       }
+      break;
     default:
       alert(`Enter a valid input`);
   }
-
-  alert(`${result}`);
